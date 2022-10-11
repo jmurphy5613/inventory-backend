@@ -11,7 +11,7 @@ const gearRouter = require('./routes/gear')
 app.use(gearRouter, '/gear')
 
 db.sequelize.sync().then(
-    app.listen(port, () => {
+    app.listen(process.env.PORT, () => {
         console.log("HEYYYY")
     })
 )
